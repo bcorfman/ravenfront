@@ -1,29 +1,30 @@
 # Exceptions
 class CheckerException(Exception):
     def __str__(self):
-        return 'Base checker Exception'
+        return "Base checker Exception"
 
 
 class WrongColorError(CheckerException):
     def __str__(self):
-        return 'Wrong color - only black or white for choose'
+        return "Wrong color - only black or white for choose"
 
     def __repr__(self):
-        return 'Wrong color'
+        return "Wrong color"
 
 
 class PositionError(CheckerException):
     def __str__(self):
-        return 'Unreal position'
+        return "Unreal position"
 
     def __repr__(self):
-        return 'Unreal position'
+        return "Unreal position"
 
 
 class WrongMoveError(CheckerException):
     """
     move == 'from' or 'to'
     """
+
     def __init__(self, move):
         self.move = move
 
@@ -36,7 +37,7 @@ class WrongMoveError(CheckerException):
 
 class GameInternalError(CheckerException):
     def __str__(self):
-        return 'Wrong game playing'
+        return "Wrong game playing"
 
     def __repr__(self):
-        return 'Wrong game playing'
+        return "Wrong game playing"
